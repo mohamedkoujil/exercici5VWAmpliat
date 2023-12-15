@@ -33,10 +33,40 @@ fun calculPerdua (kilometros: Float): Double {
     }
     return perdua
 }
+fun checkString(pMessage:String):String{
+    var userInput=""
+    var correctValue=true
+    val scanner=Scanner(System.`in`)
+    do{
+        println(pMessage)
+        userInput=scanner.nextLine()
+        if (userInput=="Y"||userInput=="N"){
+            correctValue=true
+        }
+        else{
+            correctValue=false
+            println("Valor incorrecto!")
+        }
+    }while(!correctValue)
+    scanner.next()
+    return userInput
+}
+fun checkCamper(pMessage:String):Boolean{
+    var isCamper=true
+    println(pMessage)
+    var userInput= checkString("Escribe Y/N")
+    if (userInput=="Y"){
+        isCamper=true
+    }else{
+        isCamper=false
+    }
+    return isCamper
+
+}
 
 fun preuFinal(preu: Int, perdua: Double): Double {
     var preuCamper = 0
-    if (checkCamper()) preuCamper = preu+20000
+    if (checkCamper("Es una camper?")) preuCamper = preu+20000
     return round(preu - (preu * (perdua / 100)))
 }
 fun main() {
