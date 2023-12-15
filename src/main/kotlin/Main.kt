@@ -39,8 +39,8 @@ fun checkString(pMessage:String):String{
     val scanner=Scanner(System.`in`)
     do{
         println(pMessage)
-        userInput=scanner.nextLine()
-        if (userInput=="Y"||userInput=="N"){
+        userInput=scanner.next().uppercase()
+        if (userInput=="S"||userInput=="N"){
             correctValue=true
         }
         else{
@@ -48,14 +48,14 @@ fun checkString(pMessage:String):String{
             println("Valor incorrecto!")
         }
     }while(!correctValue)
-    scanner.next()
+    //scanner.next()
     return userInput
 }
 fun checkCamper(pMessage:String):Boolean{
     var isCamper=true
     println(pMessage)
-    var userInput= checkString("Escribe Y/N")
-    if (userInput=="Y"){
+    var userInput= checkString("S/N")
+    if (userInput=="S"){
         isCamper=true
     }else{
         isCamper=false
@@ -66,7 +66,10 @@ fun checkCamper(pMessage:String):Boolean{
 
 fun preuFinal(preu: Int, perdua: Double): Double {
     var preuCamper = 0
-    if (checkCamper("Es una camper?")) preuCamper = preu+20000
+    if (checkCamper("Es una camper?")){
+        preuCamper = preu+20000
+        return round(preuCamper - (preuCamper * (perdua / 100)))
+    }
     return round(preu - (preu * (perdua / 100)))
 }
 fun main() {
