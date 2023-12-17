@@ -78,4 +78,4 @@ fun main() {
     calculPerdua (kilometros)
     println("preu de venta = ${preuFinal(preu, calculPerdua(kilometros))}€")
 }
-//s
+//
