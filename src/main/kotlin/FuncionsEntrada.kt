@@ -1,3 +1,4 @@
+/*
 import java.util.*
 
 
@@ -97,4 +98,4 @@ fun checkString(pMessage:String):String{
     }while(!correctValue)
     //scanner.next()
     return userInput
-}
+}*/
