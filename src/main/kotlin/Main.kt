@@ -1,5 +1,6 @@
 fun main() {
-    println("   ---------------------------.\n" +
+    println(BLUE_BACKGROUND + BLACK_BOLD_BRIGHT +
+            "   ---------------------------.\n" +
             " `/\"\"\"\"/\"\"\"\"/|\"\"|'|\"\"||\"\"|   ' \\.\n" +
             " /    /    / |__| |__||__|      |\n" +
             "/----------=====================|\n" +
@@ -8,7 +9,18 @@ fun main() {
             "|   \\   /     / \\          / \\  |-( )\n" +
             "=C========C==_| ) |--------| ) _/==] _-{_}_)\n" +
             " \\_\\_/__..  \\_\\_/_ \\_\\_/ \\_\\_/__.__.\n" +
-            "")
+            RESET)
+    val benvinguda = "Benvingut a la calculadora de preu de vehicles Volkswagen Grand California".split(" ")
+    val colors = arrayOf(YELLOW_UNDERLINED, GREEN_UNDERLINED, BLUE_UNDERLINED, PURPLE_UNDERLINED, CYAN_UNDERLINED, WHITE_UNDERLINED)
+    var cont = -1
+    for (i in benvinguda.indices) {
+
+        if (cont == colors.indices.last) cont = 0
+        else cont++
+
+        print(colors[cont] + "${benvinguda[i]} " + RESET)
+    }
+    println()
 
     val coche = readInt("Seleccioni el seu vehicle\n" +
                         "1. Volkswagen Grand California\n" +
@@ -28,5 +40,5 @@ fun main() {
     var portaBicis = readBoolean("El seu vehicle incorpora portabicis? (True/False)"
         ,"Introdueixi un valor vàlid")
 
-    println("Preu Basse: ${preuBase(coche)}€\nPreu Final: ${preuFinal(preuBase(coche), calculPerdua(km, anys, portaBicis))}€")
+    println("Preu Base: ${preuBase(coche)}€\nPreu Final: ${preuFinal(preuBase(coche), calculPerdua(km, anys, portaBicis))}€")
 }
