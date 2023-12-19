@@ -295,3 +295,55 @@ fun readFloat(pMessageIn: String
 
     return outputValue
 }
+
+fun readDouble(pMessageIn: String
+              , pMessageErrorDT: String
+): Double{
+
+    var outputValue: Double = 0.0
+    var correctDataType: Boolean = false
+
+    do{
+        println(pMessageIn)
+        correctDataType = scan.hasNextDouble()
+
+        if (!correctDataType){
+            println(RED_BACKGROUND_BRIGHT + "ERROR: " + pMessageErrorDT + RESET)
+        }else{
+            outputValue = scan.nextDouble()
+        }
+        scan.nextLine()
+    }while(!correctDataType)
+
+    return outputValue
+}
+
+fun readDouble(pMessageIn: String
+              , pMessageErrorDT: String
+              , pMessageErrorDV: String
+              , pMin: Double
+              , pMax: Double
+): Double{
+
+    var outputValue: Double = 0.0
+    var correctDataType: Boolean = false
+
+    do{
+        println(pMessageIn)
+        correctDataType = scan.hasNextDouble()
+
+        if (!correctDataType){
+            println(RED_BACKGROUND_BRIGHT + "ERROR: " + pMessageErrorDT + RESET)
+        }else{
+            outputValue = scan.nextDouble()
+
+            if (outputValue < pMin || outputValue > pMax){
+                println(YELLOW_BOLD_BRIGHT + "WARNING: " + pMessageErrorDV + RESET)
+                correctDataType = false
+            }
+        }
+        scan.nextLine()
+    }while(!correctDataType)
+
+    return outputValue
+}
