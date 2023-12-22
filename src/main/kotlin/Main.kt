@@ -1,6 +1,19 @@
 fun main() {
+    println(
+        BLUE_BOLD +
+                "   ---------------------------.\n" +
+                " `/\"\"\"\"/\"\"\"\"/|\"\"|'|\"\"||\"\"|   ' \\.\n" +
+                " /    /    / |__| |__||__|      |\n" +
+                "/----------=====================|\n" +
+                "| \\  /V\\  /    _.               |\n" +
+                "|()\\ \\W/ /()   _            _   |\n" +
+                "|   \\   /     / \\          / \\  |-( )\n" +
+                "=C========C==_| ) |--------| ) _/==] _-{_}_)\n" +
+                " \\_\\_/__..  \\_\\_/_ \\_\\_/ \\_\\_/__.__.\n" +
+                RESET
+    )
 
-    benvinguda()
+    titolColors("Benvingut a la calculadora de preu de vehicles Volkswagen Grand California")
 
     val coche = readInt("Seleccioni el seu vehicle\n" +
                         "1. Volkswagen Grand California\n" +

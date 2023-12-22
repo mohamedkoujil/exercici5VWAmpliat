@@ -1,38 +1,32 @@
 import kotlin.math.round
 
 /**
- * This method displays a welcome message in the console
- * @since 22/12/2023
+ * This method displays a message in different colors, these can be changed in the array "colors"
  * @autor Mohamed Koujil
+ * @since 22/12/2023
  * @version 1.0.0
+ * @param missatge Message to be displayed
  */
-fun benvinguda() {
-    println(BLUE_BOLD +
-            "   ---------------------------.\n" +
-            " `/\"\"\"\"/\"\"\"\"/|\"\"|'|\"\"||\"\"|   ' \\.\n" +
-            " /    /    / |__| |__||__|      |\n" +
-            "/----------=====================|\n" +
-            "| \\  /V\\  /    _.               |\n" +
-            "|()\\ \\W/ /()   _            _   |\n" +
-            "|   \\   /     / \\          / \\  |-( )\n" +
-            "=C========C==_| ) |--------| ) _/==] _-{_}_)\n" +
-            " \\_\\_/__..  \\_\\_/_ \\_\\_/ \\_\\_/__.__.\n" +
-            RESET)
-    val benvinguda = "Benvingut a la calculadora de preu de vehicles Volkswagen Grand California".split(" ")
+fun titolColors(missatge: String) {
+    val benvinguda = missatge.split("")
     val colors = arrayOf(YELLOW_UNDERLINED, GREEN_UNDERLINED, BLUE_UNDERLINED, PURPLE_UNDERLINED, CYAN_UNDERLINED, WHITE_UNDERLINED)
-    var cont = -1
+    var colorsIndex = 0
     for (i in benvinguda.indices) {
 
-        if (cont == colors.indices.last) cont = 0
-        else cont++
+        print(colors[colorsIndex] + benvinguda[i] + RESET)
 
-        print(colors[cont] + "${benvinguda[i]} " + RESET)
+        // If there are more letters than colors, colorsIndex is reset to 0 to avoid errors
+        if (colorsIndex == colors.indices.last) colorsIndex = 0
+        else colorsIndex++
     }
     println()
 }
 
 /**
  * This method can be used to calculate the base price according to the type of vehicle
+ * @autor Mohamed Koujil
+ * @since 22/12/2023
+ * @version 1.0.0
  * @param coche Type of vehicle
  * @return preu price of the vehicle
  */
@@ -44,6 +38,9 @@ fun preuBase(coche: Int): Float {
 
 /**
  * This method can be used to calculate the loss of value according to the kilometers, years and if it has a bike rack
+ * @autor Mohamed Koujil
+ * @since 22/12/2023
+ * @version 1.0.0
  * @param kilometres Kilometers of the vehicle
  * @param anys Years of the vehicle
  * @param portaBicis If the vehicle has a bike rack
@@ -73,6 +70,9 @@ fun calculPerdua (kilometres: Double, anys: Int, portaBicis: Boolean): Float {
 
 /**
  * This method can be used to calculate the final price according to the base price and the loss of value
+ * @autor Mohamed Koujil
+ * @since 22/12/2023
+ * @version 1.0.0
  * @param preu Base price of the vehicle
  * @param perdua Loss of value of the vehicle
  * @return preuFinal Final price of the vehicle
