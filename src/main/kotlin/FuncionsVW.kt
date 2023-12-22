@@ -2,7 +2,7 @@ import kotlin.math.round
 
 /**
  * This method displays a message in different colors, these can be changed in the array "colors"
- * @autor mohamedkoujil
+ * @author mohamedkoujil
  * @since 22/12/2023
  * @version 1.0.0
  * @param missatge Message to be displayed
@@ -24,7 +24,7 @@ fun titolColors(missatge: String) {
 
 /**
  * This method can be used to calculate the base price according to the type of vehicle
- * @autor mohamedkoujil
+ * @author mohamedkoujil
  * @since 22/12/2023
  * @version 1.0.0
  * @param coche Type of vehicle
@@ -38,7 +38,7 @@ fun preuBase(coche: Int): Float {
 
 /**
  * This method can be used to calculate the loss of value according to the kilometers, years and if it has a bike rack
- * @autor mohamedkoujil
+ * @author mohamedkoujil
  * @since 22/12/2023
  * @version 1.0.0
  * @param kilometres Kilometers of the vehicle
@@ -70,7 +70,7 @@ fun calculPerdua (kilometres: Double, anys: Int, portaBicis: Boolean): Float {
 
 /**
  * This method can be used to calculate the final price according to the base price and the loss of value
- * @autor mohamedkoujil
+ * @author mohamedkoujil
  * @since 22/12/2023
  * @version 1.0.0
  * @param preu Base price of the vehicle
