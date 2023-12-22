@@ -21,5 +21,5 @@ La funció principal d'aquest programa és calcular el preu d'un Volkswagen Gran
 3. [**preuFinal**](https://github.com/mohamedkoujil/exercici5VWAmpliat/assets/74406781/52b56146-9646-4824-949c-82de51114a73): Calcula el preu final restant el preu base amb la pèrdua
 
 ## Altres funcions <a id="funcionsExtra" />
-- [Verificació de dades](/main/src/main/kotlin/Utilities.kt): Archiu el qual conté els mètodes de verificació de tipus de dades, necessàries pel bon funcionament del programa
-- [Canvi Colors](/main/src/main/kotlin/ConsoleColors.kt): Archiu que conté diferentes colors per donar color al menú principal, errors i advertències
+- [Verificació de dades](/tree/main/src/main/kotlin/Utilities.kt): Archiu el qual conté els mètodes de verificació de tipus de dades, necessàries pel bon funcionament del programa
+- [Canvi Colors](/tree/main/src/main/kotlin/ConsoleColors.kt): Archiu que conté diferentes colors per donar color al menú principal, errors i advertències
