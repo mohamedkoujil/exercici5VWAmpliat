@@ -3,9 +3,9 @@
 ## Descripció del projecte 
 <a id="criteris"/>
 La funció principal d'aquest programa és calcular el preu d'un Volkswagen Grand California basant-se en base als següents criteris:
-   - Kilometratge
-   - Any de fabricació
-   - Accessoris
+- Kilometratge
+- Any de fabricació
+- Accessoris
 
 ### Menu principal
 - El programa comença amb un menu principal on s'escull el model del vehicle.
@@ -15,7 +15,7 @@ La funció principal d'aquest programa és calcular el preu d'un Volkswagen Gran
   ![image](https://github.com/mohamedkoujil/exercici5VWAmpliat/assets/74406781/53238c18-00df-4342-91a5-c9f218466441)
 
 ## Funcions principals <a id="funcionsPrincipals"/>
-1. **preuBase**: Aquesta funció calcula el preu base segons el model del [vehicle](#codigo-importante)
+1. **preuBase**: Aquesta funció calcula el preu base segons el model del [vehicle](#preuBase)
 2. **calculPerdua**: Aqueta funció calcula la pèrdua de diners segons els [criteris](#criteris) mencionats anteriorment
 3. **preuFinal**: Calcula el preu final restant el preu base amb la pèrdua
 
