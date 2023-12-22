@@ -15,7 +15,7 @@ La funció principal d'aquest programa és calcular el preu d'un Volkswagen Gran
   ![image](https://github.com/mohamedkoujil/exercici5VWAmpliat/assets/74406781/53238c18-00df-4342-91a5-c9f218466441)
 
 ## Funcions principals <a id="funcionsPrincipals"/>
-1. **preuBase**: Aquesta funció calcula el preu base segons el model del [vehicle](#preuBase)
+1. [**preuBase**](https://github.com/mohamedkoujil/exercici5VWAmpliat/assets/74406781/2b89cfcb-9e58-4ee1-96ff-964e270a506d): Aquesta funció calcula el preu base segons el model del vehicle
 2. **calculPerdua**: Aqueta funció calcula la pèrdua de diners segons els [criteris](#criteris) mencionats anteriorment
 3. **preuFinal**: Calcula el preu final restant el preu base amb la pèrdua
 
