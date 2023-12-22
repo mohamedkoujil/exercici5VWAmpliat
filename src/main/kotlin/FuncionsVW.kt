@@ -30,7 +30,7 @@ fun titolColors(missatge: String) {
  * @param coche Type of vehicle
  * @return preu price of the vehicle
  */
- //<a id="codigo-importante"></a>
+ <a id="preuBase"></a>
 fun preuBase(coche: Int): Float {
     var preu = 73490.0F
     if (coche == 2) preu += 20000
